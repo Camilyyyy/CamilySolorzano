@@ -43,5 +43,15 @@ namespace CamilySolorzano.Models
         [ForeignKey("Cliente")]
         public int idCliente { get; set; }
         public Cliente? Cliente { get; set; }
+
+        //Devolver cantidad de veces que ha ido al hotel
+        public int CalculoReserva()
+        {
+            if (Cliente != null)
+            {
+                Cliente.cantidadReservas = cantidadReservas + 1;
+            }
+            return 0;
+        }
     }
 }

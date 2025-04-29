@@ -39,6 +39,11 @@ namespace CamilySolorzano.Models
         //Atributo Nombre
         public string camilyS { get; set; }
 
+        [Required]
+        [DisplayName("Cantidad de Reservas")]
+        public int cantidadReservas { get; set; }
+
+
 
     }
 }

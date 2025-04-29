@@ -46,7 +46,7 @@ namespace CamilySolorzano.Models
             {
                 recompensa = Recompensa.SILVER;
             }
-            if (puntosAcumulados > 500)
+          else
             {
                 recompensa = Recompensa.GOLD;
             }
@@ -54,7 +54,10 @@ namespace CamilySolorzano.Models
 
        public void Calcularpuntos()
         {
-            puntosAcumulados = Reserva.cantidadReservas * 100;
+            if (Cliente != null)
+            {
+                puntosAcumulados = Cliente.cantidadReservas * 100;
+            }
         }
         public enum Recompensa
         {
