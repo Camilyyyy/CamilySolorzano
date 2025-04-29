@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
 namespace CamilySolorzano.Models
@@ -8,17 +9,36 @@ namespace CamilySolorzano.Models
         [Key]
         public int idCliente { get; set;}
 
-        [Required]
-        [MaxLength(80)]
-        public String NombreCliente { get; set;}
 
+        //Int
         [Required]
-        public bool MayorEdad { get; set;}
+        [DisplayName("Edad")]
+        public int Edad {  get; set;}
 
+        //Decimal
         [Required]
-        public DateOnly fecha { get; set;}
+        [DisplayName("Altura")]
+        public decimal altura { get; set;}
 
-        public String CamilyS { get; set; }
+        //String
+        [Required]
+        [StringLength(30)]
+        [DisplayName("Nombre Cliente")]
+        public string NombreCliente { get; set; }
+
+
+        //Bool
+        [Required]
+        [DisplayName("Mayor de Edad")]
+        public bool IsMayorEdad { get; set; }
+        
+        //Date
+        [Required]
+        [DisplayName("Fecha Nacimiento")]
+        public DateOnly fechaNacimiento { get; set;}
+
+        //Atributo Nombre
+        public string camilyS { get; set; }
 
 
     }
