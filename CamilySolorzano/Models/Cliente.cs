@@ -9,7 +9,6 @@ namespace CamilySolorzano.Models
         [Key]
         public int idCliente { get; set;}
 
-
         //Int
         [Required]
         [DisplayName("Edad")]
